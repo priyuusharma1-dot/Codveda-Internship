@@ -1,0 +1,110 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background: #e6f0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Dark Mode */
+body.dark {
+    background: #0a192f;
+    color: white;
+}
+
+/* Toggle Button */
+#themeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 14px;
+    background: #003366;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Container */
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    border: 2px solid #003366;
+}
+
+body.dark .container {
+    background: #112240;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Inputs */
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #003366;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Checkbox Fix */
+.check {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    gap: 6px;
+}
+
+.check input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+/* Error */
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+/* Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #003366;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: #001f4d;
+}
+
+/* Success */
+#successMsg {
+    color: green;
+    text-align: center;
+    margin-top: 10px;
+}
