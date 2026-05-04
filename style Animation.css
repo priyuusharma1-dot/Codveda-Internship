@@ -1,0 +1,87 @@
+/* RESET + FIX LINE ISSUE */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+
+  overflow-x: hidden;
+}
+
+/* NAME ANIMATION */
+.name {
+  font-size: 42px;
+  margin-bottom: 25px;
+  position: relative;
+  animation: moveName 3s infinite alternate;
+}
+
+@keyframes moveName {
+  from { left: -100px; }
+  to { left: 100px; }
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+/* BOXES */
+.box {
+  width: 130px;
+  height: 130px;
+  background: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+
+  animation: float 2s infinite ease-in-out;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* HOVER */
+.box:hover {
+  transform: scale(1.2);
+  background: black;
+  color: white;
+}
+
+/* BUTTON */
+button {
+  margin-top: 30px;
+  padding: 14px 28px;
+  font-size: 17px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* BUTTON HOVER */
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+}
