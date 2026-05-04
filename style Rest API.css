@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+
+    /* 🌤 LIGHT SKY BLUE BACKGROUND */
+    background: linear-gradient(to top, #a6d8ff, #dff6ff);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ☁️ SMALL DESIGN BUBBLES */
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+}
+
+body::before {
+    width: 120px;
+    height: 120px;
+    top: 40px;
+    left: 40px;
+}
+
+body::after {
+    width: 180px;
+    height: 180px;
+    bottom: 40px;
+    right: 40px;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 420px;
+    padding: 30px;
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(12px);
+
+    /* 🔲 DARK BORDER */
+    border: 3px solid black;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    text-align: center;
+    color: #000;
+    z-index: 1;
+}
+
+/* TITLE */
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* SEARCH BOX */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid black;
+    outline: none;
+}
+
+/* BUTTON */
+.search-box button {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background: #ffcc00;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #ffaa00;
+}
+
+/* WEATHER BOX */
+.weather-box {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+
+    border: 2px solid black;
+    background: rgba(255,255,255,0.4);
+
+    font-size: 18px;
+}
+
+/* LOADING */
+#loading {
+    margin-top: 10px;
+}
+
+/* ERROR */
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* HIDDEN */
+.hidden {
+    display: none;
+}
