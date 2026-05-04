@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Django App</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #87CEEB, #ffffff);
+        }
+
+        .navbar {
+            background: #003366;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a, .navbar button {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .container {
+            width: 300px;
+            margin: auto;
+            margin-top: 100px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+            text-align: center;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        button {
+            background: #0077cc;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+
+    {% if user.is_authenticated %}
+        <form action="/logout/" method="POST" style="display:inline;">
+            {% csrf_token %}
+            <button>Logout</button>
+        </form>
+    {% else %}
+        <a href="/login/">Login</a>
+        <a href="/register/">Register</a>
+    {% endif %}
+</div>
+
+{% if messages %}
+  {% for message in messages %}
+    <p style="color: green; text-align:center;">{{ message }}</p>
+  {% endfor %}
+{% endif %}
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
