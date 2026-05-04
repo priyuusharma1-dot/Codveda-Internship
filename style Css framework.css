@@ -1,0 +1,87 @@
+body {
+  background: linear-gradient(to right, #e0f2fe, #dbeafe);
+  font-family: Arial, sans-serif;
+}
+
+.main-container {
+  margin-top: 50px;
+}
+
+/* Heading */
+.main-heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Card */
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  height: 100%;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+/* 🔵 Profile Header - Dark Blue (Final Fix) */
+.profile-header {
+  background: #1e3a8a;
+  color: white;
+  padding: 15px;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+}
+
+/* 🔵 Dark Blue Profile Button */
+.profile-btn {
+  background-color: #1e3a8a !important;
+  color: white !important;
+}
+
+.profile-btn:hover {
+  background-color: #1e40af !important;
+}
+
+/* Bold Name */
+.name-bold {
+  font-weight: bold;
+}
+
+/* 🟡 Dashboard */
+.dashboard-header {
+  background: #facc15;
+  color: black;
+  padding: 15px;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+}
+
+.dashboard-btn {
+  background: #facc15;
+  color: black;
+}
+
+.dashboard-btn:hover {
+  background: #eab308;
+}
+
+/* 🔵 Settings */
+.settings-header {
+  background: #0f766e;
+  color: white;
+  padding: 15px;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+}
+
+.settings-btn {
+  background: #0f766e;
+  color: white;
+}
+
+.settings-btn:hover {
+  background: #115e59;
+}
